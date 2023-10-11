@@ -342,7 +342,7 @@ endif
 :5P:
 AttackRegister(Light, 5P)
 
-AttackDamage(1000)
+AttackDamage(15)
 AttackDuration(20)
 
 F1-6:
@@ -351,7 +351,7 @@ endif
 
 F6-10:
 	Sprite(4)
-	Hitbox(0, 11000, 18000, 7000)
+	Hitbox(10000, 17000, 18000, 10000)
 	V_AttackHasTouched:
 		InputTransition(5P, 5PP, 999)
 	endif
@@ -359,7 +359,7 @@ endif
 :5PP:
 AttackRegister(Light, 5PP)
 
-AttackDamage(1000)
+AttackDamage(30)
 AttackDuration(20)
 
 F1-6:
@@ -368,7 +368,7 @@ endif
 
 F6-8:
 	Sprite(4)
-	Hitbox(0, 11000, 18000, 7000)
+	Hitbox(10000, 17000, 18000, 10000)
 	
 endif
 
@@ -477,7 +477,6 @@ else
 		Sprite(11)
 	endif
 endif
-
 :AttackCancels-Specials-EX:
 ## CallParent(AttackCancels-Specials-EX)
 ## Helper function to quickly add all EX special cancels to a move.
@@ -574,4 +573,3 @@ SetMomentum(MOVE_Run_Speed, 0)
 :RunStop:
 CallParent(RunStop)
 Flag(CanBlock)
-
