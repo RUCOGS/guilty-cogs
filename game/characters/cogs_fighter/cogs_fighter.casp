@@ -405,6 +405,7 @@ F6-8:
     Hitbox(0, 10000, 10000, 30000)
 endif
 V_AttackHasTouched:
+	InputTransition(66, RunStart, 999)
 	IJumpPress:
 		Transition(Jumpsquat)
 	endif
@@ -477,7 +478,6 @@ else
 		Sprite(11)
 	endif
 endif
-
 :AttackCancels-Specials-EX:
 ## CallParent(AttackCancels-Specials-EX)
 ## Helper function to quickly add all EX special cancels to a move.
@@ -574,4 +574,3 @@ SetMomentum(MOVE_Run_Speed, 0)
 :RunStop:
 CallParent(RunStop)
 Flag(CanBlock)
-
